@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+    <div class="settings-container">
+        <h2>Account Settings</h2>
+        
+        <form id="settings-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="password">New Password:</label>
+            <input type="password" id="password" name="password">
+
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password">
+
+            <button type="submit">Save Changes</button>
+        </form>
+
+        <button id="delete-account" class="delete-btn">Delete Account</button>
+    </div>
+
+    <script src="settings.js"></script>
+
+    <div class="back-link">
+        <a href="landing.html">Back to Dashboard</a>
+    </div>
+</body>
+</html>

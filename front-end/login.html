@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Login.css">
+    <title>Login - Dispute Resolution System</title>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login to Dispute Resolution System</h2>
+        <form action="/login" method="POST">
+            <!-- Username Field with Floating Label -->
+            <label for="username">Username: </label>
+            <div class="input-group floating-label">
+                <input type="text" id="username" name="username" placeholder=" " required>
+               
+            </div>
+
+            <!-- Email Field with Floating Label -->
+            <label for="email">Email: </label>
+            <div class="input-group floating-label">
+                
+                <input type="email" id="email" name="email" placeholder=" " required>
+               
+            </div>
+
+            <!-- Password Field -->
+            <label for="password">Password: </label>
+            <div class="input-group error">
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+
+            <!-- Login Button -->
+            <button type="submit" class="login-btn">Login</button>
+
+            <!-- Register Link -->
+            <div class="register-link">
+                <p>Don't have an account? <a href="signup.html">Register here</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

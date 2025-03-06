@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Manage-case.css">
+    <title>Manage Case - Dispute Resolution System</title>
+</head>
+<body>
+    <!-- Main Container for Managing Case -->
+    <div class="manage-case-container">
+        <h2>Manage Case #12345</h2>
+
+        <!-- Case Details Section -->
+        <div class="case-details">
+            <p><strong>Case ID:</strong> 12345</p>
+            <p><strong>Dispute Title:</strong> Unlawful Eviction</p>
+            <p><strong>Status:</strong> <span id="case-status">Pending</span></p>
+            <p><strong>Case Progress:</strong> <span id="case-progress">In Review</span></p>
+        </div>
+
+        <!-- Form to Update Case Status and Progress -->
+        <form id="case-update-form">
+            <div class="input-group">
+                <label for="status">Update Case Status:</label>
+                <select id="status" name="status" required>
+                    <option value="Pending">Pending</option>
+                    <option value="Under Review">Under Review</option>
+                    <option value="Resolved">Resolved</option>
+                    <option value="Closed">Closed</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="progress">Update Case Progress:</label>
+                <textarea id="progress" name="progress" rows="4" placeholder="Provide progress details..." required></textarea>
+            </div>
+
+            <div class="input-group">
+                <label for="resolution">Assign Resolution:</label>
+                <textarea id="resolution" name="resolution" rows="4" placeholder="Assign possible resolution..." required></textarea>
+            </div>
+
+            <button type="submit" class="update-btn">Update Case</button>
+        </form>
+
+        <!-- User Notification Section -->
+        <div class="user-notification">
+            <h3>Notify User About Case Progress</h3>
+            <div class="input-group">
+                <label for="user-email">User's Email:</label>
+                <input type="email" id="user-email" name="user-email" placeholder="Enter user's email" required>
+            </div>
+            <div class="input-group">
+                <label for="notification-message">Notification Message:</label>
+                <textarea id="notification-message" name="notification-message" rows="4" placeholder="Write message to notify the user..." required></textarea>
+            </div>
+            <button type="button" class="notify-btn">Send Notification</button>
+        </div>
+
+        <!-- User View Section -->
+        <div class="user-view">
+            <h3>User View: Case Progress & Resolution</h3>
+            <p><strong>Assigned Resolution:</strong> <span id="assigned-resolution">Not Assigned</span></p>
+            <p><strong>Case Progress:</strong> <span id="user-case-progress">No Progress Yet</span></p>
+        </div>
+    </div>
+
+    <!-- Back Link to Dashboard -->
+    <div class="back-link">
+        <a href="landing.html">Back to Dashboard</a>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="Manage-case.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Case Progress in Local Dispute Resolution</title>
+    <link rel="stylesheet" href="Progress.css">
+</head>
+<body>
+    <div class="container">
+        <h2>View Case Progress</h2>
+
+        <!-- Search Bar Section -->
+        <section class="search-section">
+            <form id="search-form" class="search-form">
+                <input type="text" id="search" name="search" placeholder="Search by Case ID or Title..." required>
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <!-- Case Information Section -->
+        <section id="case-info" class="case-info" style="display: none;">
+            <h3>Case Information</h3>
+            <div class="case-details">
+                <div class="input-group">
+                    <label>Case Title:</label>
+                    <p id="case_title"></p>
+                </div>
+                <div class="input-group">
+                    <label>Case Description:</label>
+                    <p id="case_description"></p>
+                </div>
+                <div class="input-group">
+                    <label>Submission Date:</label>
+                    <p id="case_submission_date"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Status Section -->
+        <section id="case-status" class="case-status" style="display: none;">
+            <h3>Current Case Status</h3>
+            <div class="status-details">
+                <div class="input-group">
+                    <label>Status:</label>
+                    <p id="case_status"></p>
+                </div>
+                <div class="input-group">
+                    <label>Assigned Official:</label>
+                    <p id="assigned_official"></p>
+                </div>
+                <div class="input-group">
+                    <label>Next Step:</label>
+                    <p id="next_step"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Evidence Section -->
+        <section id="evidence-section" class="evidence-section" style="display: none;">
+            <h3>Attached Evidence</h3>
+            <div class="input-group">
+                <label>Evidence Files:</label>
+                <ul id="evidence_list"></ul>
+            </div>
+        </section>
+
+        <!-- Back Link -->
+        <div class="back-link">
+            <a href="landing.html">Back to Dashboard</a>
+        </div>
+    </div>
+    
+    <script src="Progress.js"></script>
+</body>
+</html>

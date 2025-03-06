@@ -1,0 +1,135 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: #2c3e50;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Landing Section */
+#landing {
+    background: linear-gradient(135deg, #e5e2e8, #dde0e5);
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+#landing h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#landing p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    background: #fff;
+    color: #2575fc;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background: #bcc0c5;
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+/* Dashboard Sections */
+.dashboard {
+    padding: 60px 20px;
+    text-align: center;
+    background: #fff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.dashboard .btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.dashboard .btn {
+    background: #2575fc;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.dashboard .btn:hover {
+    background: #1a5bbf;
+    transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #landing h1 {
+        font-size: 2rem;
+    }
+
+    #landing p {
+        font-size: 1rem;
+    }
+
+    .btn-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    .dashboard {
+        margin: 10px;
+        padding: 40px 10px;
+    }
+
+    .dashboard h2 {
+        font-size: 1.5rem;
+    }
+}
+
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

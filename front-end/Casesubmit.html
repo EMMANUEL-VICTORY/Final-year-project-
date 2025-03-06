@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Case into Local Dispute Resolution system</title>
+    <link rel="stylesheet" href="Casesubmit.css">
+</head>
+<body>
+    <h2>Submit a Dispute</h2><br>   
+    <form action="/submit-case" method="POST" enctype="multipart/form-data">
+        
+        <!-- Offender/Plaintiff Information -->
+        <section class="plaintiff-info">
+            <h3>Offender Information</h3>
+            <div class="input-group">
+                <label for="offender_name">Name</label>
+                <input type="text" id="offender_name" name="offender_name" required>
+            </div>
+            <div class="input-group">
+                <label for="offender_phone">Phone Number</label>
+                <input type="tel" id="offender_phone" name="offender_phone" required>
+            </div>
+            <div class="input-group">
+                <label for="offender_nid">National ID</label>
+                <input type="text" id="offender_nid" name="offender_nid" required>
+            </div>
+            <div class="input-group">
+                <label for="offender_village">Village</label>
+                <input type="text" id="offender_village" name="offender_village" required>
+            </div>
+            <div class="input-group">
+                <label for="offender_cell">Cell</label>
+                <input type="text" id="offender_cell" name="offender_cell" required>
+            </div>
+            <div class="input-group">
+                <label for="offender_sector">Sector</label>
+                <input type="text" id="offender_sector" name="offender_sector" required>
+            </div>
+            <div class="input-group">
+                <label for="offender_district">District</label>
+                <input type="text" id="offender_district" name="offender_district" required>
+            </div>
+        </section>
+
+        <!-- Defendant Information -->
+        <section class="defendant-info">
+            <h3>Defendant Information</h3>
+            <div class="input-group">
+                <label for="defendant_name">Name</label>
+                <input type="text" id="defendant_name" name="defendant_name">
+            </div>
+            <div class="input-group">
+                <label for="defendant_phone">Phone Number</label>
+                <input type="tel" id="defendant_phone" name="defendant_phone">
+            </div>
+            <div class="input-group">
+                <label for="defendant_village">Village</label>
+                <input type="text" id="defendant_village" name="defendant_village">
+            </div>
+            <div class="input-group">
+                <label for="defendant_cell">Cell</label>
+                <input type="text" id="defendant_cell" name="defendant_cell">
+            </div>
+            <div class="input-group">
+                <label for="defendant_sector">Sector</label>
+                <input type="text" id="defendant_sector" name="defendant_sector">
+            </div>
+            <div class="input-group">
+                <label for="defendant_district">District</label>
+                <input type="text" id="defendant_district" name="defendant_district">
+            </div>
+        </section>
+
+        <!-- Case Details -->
+        <section>
+            <h3>Fill Information about Your Case</h3>
+            <div class="input-group">
+                <label for="case_title">Case Title</label>
+                <input type="text" id="case_title" name="case_title" required>
+            </div>
+            <div class="input-group">
+                <label for="case_title">Case_ID</label>
+                <input type="text" id="Case_ID" name="case_ID" required>
+            </div>
+
+            <div class="input-group">
+                <label for="case_description">Case Description</label>
+                <textarea id="case_description" name="case_description" rows="4" required></textarea>
+            </div>
+
+            <div class="input-group">
+                <label for="evidence">Attach Evidence</label>
+                <input type="file" id="evidence" name="evidence" accept=".jpg,.jpeg,.png,.pdf" required>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Case</button>
+        </section>
+    </form>
+
+    <!-- Back Link -->
+    <div class="back-link">
+        <a href="landing.html">Back to Dashboard</a>
+    </div>
+</body>
+</html>
